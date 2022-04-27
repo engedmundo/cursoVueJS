@@ -1,16 +1,14 @@
 new Vue({
     el: '#desafio',
     data: {
-        nome: 'Edmundo Abreu e Lima',
-        idade: 36,
-        imagem: 'http://files.cod3r.com.br/curso-vue/vue.jpg',
+        valor: '',
     },
     methods: {
-        triplicaIdade: function (idade) {
-            return idade * 3
+        exibirAlerta(event) {
+            alert('Este botão foi clicado')
         },
-        aleatorio: () => {
-            return Math.random()
-        },
+        getValue(event) {
+            this.valor = event.target.value
+        }
     }
 })
